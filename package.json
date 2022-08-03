@@ -1,0 +1,14 @@
+{
+
+  "name": "react-with-express",
+  "version": "1.0.0",
+  "description": "Starter kit for creating React and Express apps",
+  "scripts": {
+    "server": "npm start --prefix api",
+    "client": "npm start --prefix base-react",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
