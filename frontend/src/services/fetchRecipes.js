@@ -1,10 +1,9 @@
-import { useState } from "react";
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:9000';
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-export const FetchRecipes = async () => {
-  const results = await axios(`${BASE_URL}/api/recipes`)
-  console.log("fetch:", results.data);
+export const FetchRecipe = async (id) => {
+  id = id || ""
+  const results = await axios(`${BASE_URL}/api/recipes/${id}`)
   return results.data;
 }

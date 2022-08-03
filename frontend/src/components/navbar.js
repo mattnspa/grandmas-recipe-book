@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import ImgPath from "./nav-icon-light.svg";
 
-function NavbarComponent() {
+export const NavbarComponent = () => {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
@@ -26,5 +26,3 @@ function NavbarComponent() {
     </Navbar>
   );
 }
-
-export default NavbarComponent;
