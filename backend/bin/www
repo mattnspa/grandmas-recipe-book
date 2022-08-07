@@ -9,11 +9,18 @@ var debug = require('debug')('api:server');
 var http = require('http');
 
 /**
+ * Get environment from environment and store in Express.
+ */
+
+ var node_env = process.env.NODE_ENV || 'dev';
+ app.set('node_env', node_env);
+
+ /**
  * Get port from environment and store in Express.
  */
 
- var port = normalizePort(process.env.PORT || '9000');
- app.set('port', port);
+  var port = normalizePort(process.env.PORT || '9000');
+  app.set('port', port);
 
  /**
   * Get delay from environment and store in Express.

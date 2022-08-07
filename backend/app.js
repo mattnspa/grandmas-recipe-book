@@ -11,7 +11,11 @@ var recipesRouter = require('./routes/recipes');
 var app = express();
 
 // Enable All CORS Requests
-app.use(cors())
+if (process.env.NODE_ENV !== "prod") {
+  console.log("Dev environment detected, enabling cors")
+  app.use(cors());
+}
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // set delay
 app.use(function(req,res,next) {
+  console.log(process.env.ENV == "dev")
   const delay = app.get('delay')
   setTimeout(next,delay)
 });
