@@ -8,24 +8,36 @@ import { Link } from "react-router-dom";
 
 import { FetchRecipe } from "../services/fetchRecipes";
 
-export const HomePage = () => {
+export const AllRecipesPage = () => {
   const [recipes, setRecipes] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      const results = await FetchRecipe("/random");
+      const results = await FetchRecipe();
       setRecipes(results)
+      setLoading(false)
     };
 
     fetchData();
   }, []);
 
-  return (
+  async function pageChange(page) {
+    console.log(page);
+    setLoading(true)
+    setRecipes(await FetchRecipe(`?page=${page}`))
+    setLoading(false)
+  }
 
+  if (isLoading) {
+    return <div className="App">Loading...</div>;
+  }
+
+  return (
     <Container fluid >
     <Card className="bg-light m-5">
       <Row >
-        { recipes.map(recipe => (
+        { recipes.data?.map(recipe => (
           <Col align="center" className="mt-5" key={recipe.id}>
             <Card style={{ width: "18rem" }}>
               <Card.Img 
@@ -44,12 +56,23 @@ export const HomePage = () => {
         </Col>
         ))}
       </Row>
-      <div className="d-flex align-items-end flex-column p-2">
-        <Button as={Link} to="/recipes" variant="secondary">
-          See all 
-          <i class="bi bi-chevron-right"></i>
-        </Button>
+      <Row>
+      <div className="d-flex justify-content-between p-2">
+        <Col className="d-flex justify-content-beginning ps-3">
+          {recipes.paging?.previousPage && <Button variant="secondary" onClick={() => {
+            pageChange(recipes.paging?.previousPage)}}>
+              Back
+          </Button>}
+        </Col>
+        <Col></Col>
+        <Col className="d-flex justify-content-end pe-3">
+          {recipes.paging?.nextPage && <Button variant="secondary" onClick={() => {
+            pageChange(recipes.paging?.nextPage)}}>
+            Next page
+          </Button>}
+        </Col>
       </div>
+      </Row>
     </Card>
     </Container>
   );
