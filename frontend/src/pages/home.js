@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 import { FetchRecipe } from "../services/fetchRecipes";
 
-export const HomePage = () => {
+export const HomePage = ({ darkTheme }) => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -21,9 +21,7 @@ export const HomePage = () => {
   }, []);
 
   return (
-
-    <Container fluid >
-    <Card className="bg-light m-5">
+    <div className={(darkTheme ? "bg-dark" : "bg-light").concat(" ","vh-100")}>
       <Row >
         { recipes.map(recipe => (
           <Col align="center" className="mt-5" key={recipe.id}>
@@ -47,10 +45,9 @@ export const HomePage = () => {
       <div className="d-flex align-items-end flex-column p-2">
         <Button as={Link} to="/recipes" variant="secondary">
           See all 
-          <i class="bi bi-chevron-right"></i>
+          <i className="bi bi-chevron-right"></i>
         </Button>
       </div>
-    </Card>
-    </Container>
+    </div>
   );
 }
