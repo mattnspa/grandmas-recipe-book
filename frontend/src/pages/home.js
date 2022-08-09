@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/esm/Button";
 import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
+import { RecipeCard } from "../components/recipeCards";
 
 import { FetchRecipe } from "../services/fetchRecipes";
 
@@ -27,20 +28,7 @@ export const HomePage = () => {
       <Row >
         { recipes.map(recipe => (
           <Col align="center" className="mt-5" key={recipe.id}>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img 
-                variant="top"
-                src={recipe.image}
-                width={250}
-                height={250}/>
-              <Card.Body>
-                <Card.Title>{recipe.title}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">{ recipe.subtitle }</Card.Subtitle>
-                <Card.Text>
-                </Card.Text>
-                <Card.Link as={Link} to={`/recipes/${recipe.id}`}>Go to the recipe</Card.Link>
-              </Card.Body>
-            </Card>
+            <RecipeCard recipe={recipe} />
         </Col>
         ))}
       </Row>
