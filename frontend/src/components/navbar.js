@@ -18,8 +18,8 @@ export const NavbarComponent = () => {
                 alt="React Bootstrap logo"
               />
             </Navbar.Brand>
-        <Nav>
-          <Nav.Link as={Link} to="/">Home</Nav.Link>
+        <Nav className="me-auto">
+          <Nav.Link as={Link} to="/recipes">Recipes</Nav.Link>
           <Nav.Link as={Link} to="/info">Info</Nav.Link>
         </Nav>
       </Container>
