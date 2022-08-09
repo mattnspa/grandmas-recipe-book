@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row";
 
 import { RecipeCard } from "../components/recipeCards";
+import { Paginator } from "../components/paginator";
 import { FetchRecipe } from "../services/fetchRecipes";
 
 export const AllRecipesPage = () => {
@@ -22,7 +23,7 @@ export const AllRecipesPage = () => {
     fetchData();
   }, []);
 
-  async function pageChange(page) {
+  const pageChange = async (page) => {
     setLoading(true)
     setRecipes(await FetchRecipe(`?page=${page}`))
     setLoading(false)
@@ -30,34 +31,20 @@ export const AllRecipesPage = () => {
 
   if (isLoading) return <div className="App">Loading...</div>;
 
-return (
-    <Container fluid >
-      <Card className="bg-light m-5">
-        <Row >
-          { recipes.data?.map(recipe => (
-            <Col align="center" className="mt-5" key={recipe.id}>
-              <RecipeCard recipe={recipe} />
-          </Col>
-          ))}
-        </Row>
-        <Row>
-          <div className="d-flex justify-content-between p-2">
-            <Col className="d-flex justify-content-beginning ps-3">
-              {recipes.paging?.previousPage && <Button variant="secondary" onClick={() => {
-                pageChange(recipes.paging?.previousPage)}}>
-                  Back
-              </Button>}
+  return (
+    <div>
+      <Paginator handleClick={pageChange} {...recipes.paging} />      
+      <Container fluid >
+        <Card className="bg-light m-5">
+          <Row >
+            { recipes.data?.map(recipe => (
+              <Col align="center" className="mt-5" key={recipe.id}>
+                <RecipeCard recipe={recipe} />
             </Col>
-            <Col></Col>
-            <Col className="d-flex justify-content-end pe-3">
-              {recipes.paging?.nextPage && <Button variant="secondary" onClick={() => {
-                pageChange(recipes.paging?.nextPage)}}>
-                Next page
-              </Button>}
-            </Col>
-          </div>
-        </Row>
-      </Card>
-    </Container>
+            ))}
+          </Row>
+        </Card>
+      </Container>
+    </div>
   );
 }
