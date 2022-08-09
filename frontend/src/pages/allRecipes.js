@@ -3,8 +3,9 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-import { RecipeCard } from "../components/recipeCards";
+import { Loading } from "../components/loading";
 import { Paginator } from "../components/paginator";
+import { RecipeCard } from "../components/recipeCards";
 import { FetchRecipe } from "../services/fetchRecipes";
 
 export const AllRecipesPage = () => {
@@ -14,20 +15,20 @@ export const AllRecipesPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       const results = await FetchRecipe();
-      setRecipes(results)
-      setLoading(false)
+      setRecipes(results);
+      setLoading(false);
     };
 
     fetchData();
   }, []);
 
   const pageChange = async (page) => {
-    setLoading(true)
-    setRecipes(await FetchRecipe(`?page=${page}`))
-    setLoading(false)
+    setLoading(true);
+    setRecipes(await FetchRecipe(`?page=${page}`));
+    setLoading(false);
   }
 
-  if (isLoading) return <div className="App">Loading...</div>;
+  if (isLoading) return (<Loading />);
 
   return (
     <div>   
