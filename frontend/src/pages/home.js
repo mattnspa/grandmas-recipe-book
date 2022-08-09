@@ -5,21 +5,26 @@ import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/esm/Button";
 import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
-import { RecipeCard } from "../components/recipeCards";
 
+import { Loading } from "../components/loading";
+import { RecipeCard } from "../components/recipeCards";
 import { FetchRecipe } from "../services/fetchRecipes";
 
 export const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       const results = await FetchRecipe("/random");
-      setRecipes(results)
+      setRecipes(results);
+      setLoading(false);
     };
 
     fetchData();
   }, []);
+
+  if (isLoading) return (<Loading />);
 
   return (
 
