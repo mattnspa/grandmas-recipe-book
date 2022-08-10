@@ -1,10 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var ingredientsJson = require("../db/recipes.json");
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+var tools = require("../service/tools");
 
 /**
  * Returns an array of integers of length @param length
@@ -29,39 +26,9 @@ function getArrayofRandomUniqueNumbers(length,maxVal) {
   return (arr);
 }
 
-/**
- * Return a paginated data object.
- * @param {[]} data List of recipes
- * @returns {{}} paginated json.
- */
-function paginate(data,queryLimit,queryPage) {
-  minLimit = 1
-  maxLimit = 4
-  const limit = parseInt(queryLimit) ? Math.min(Math.max(parseInt(queryLimit),minLimit),maxLimit) : maxLimit;
-  minPage = 1
-  maxPage = Math.ceil(data.length / limit)
-  const page = parseInt(queryPage) ? Math.min(Math.max(parseInt(queryPage),minPage),maxPage) : minPage;
-
-  const startIndex = (page - 1) * limit;
-  const endIndex = page * limit;
-  // const nextPage = (endIndex < data.length) ? page + 1 : null
-
-  let result = {};
-  let paging = {};
-  if (endIndex < data.length) {
-    paging.nextPage = page + 1
-  }
-  if (startIndex > 1) {
-    paging.previousPage = page - 1
-  }
-  paging = {...paging,currentPage: page, lastPage: maxPage, startIndex: startIndex, endIndex: endIndex};
-  return {paging: paging, data: data.slice(startIndex, endIndex)};
-  
-}
-
 /* GET paginated list of all recipes. */
 router.get('/', function(req, res, next) {
-  res.json(paginate(ingredientsJson.recipes, req.query.limit, req.query.page));
+  res.json(tools.paginate(ingredientsJson.recipes, req.query.limit, req.query.page));
 });
 
 /* GET random list of recipe. */
@@ -73,12 +40,12 @@ router.get('/random', function(req, res, next) {
 
 /* GET recipe with specific id. */
 router.get('/search', function(req, res, next) {
-  const query = req.query.q
+  const query = req.query.q.toLowerCase()
   const recipeArr = ingredientsJson.recipes.filter(
     recipe => {return recipe.title.toLowerCase().includes(query);}
   );
   recipeArr.length > 0 ? 
-    res.json(paginate(recipeArr, req.query.limit, req.query.page)) :
+    res.json(tools.paginate(recipeArr, req.query.limit, req.query.page)) :
     res.status(404).send('Recipes not found');
 });
 

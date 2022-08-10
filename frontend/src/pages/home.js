@@ -27,23 +27,22 @@ export const HomePage = () => {
   if (isLoading) return (<Loading />);
 
   return (
-
-    <Container fluid >
-    <Card className="bg-light m-5">
-      <Row >
-        { recipes.map(recipe => (
-          <Col align="center" className="mt-5" key={recipe.id}>
-            <RecipeCard recipe={recipe} />
-        </Col>
-        ))}
-      </Row>
-      <div className="d-flex align-items-end flex-column p-2">
-        <Button as={Link} to="/recipes" variant="secondary">
-          See all 
-          <i class="bi bi-chevron-right"></i>
-        </Button>
-      </div>
-    </Card>
-    </Container>
+    <div>
+      <Card className="bg-light m-5">
+        <Row >
+          { recipes.map(recipe => (
+            <Col align="center" className="mt-5" key={recipe.id}>
+              <RecipeCard recipe={recipe} />
+          </Col>
+          ))}
+        </Row>
+        <div className="d-flex align-items-end flex-column p-2">
+          <Button as={Link} to="/recipes" variant="secondary">
+            See all 
+            <i class="bi bi-chevron-right"></i>
+          </Button>
+        </div>
+      </Card>
+    </div>
   );
 }
