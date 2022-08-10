@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 
 import ImgPath from "./nav-icon-light.svg";
+import { SearchBar } from './searchbar';
 
 export const NavbarComponent = props => {
   const { submitButton, location } = props;
@@ -46,6 +47,7 @@ export const NavbarComponent = props => {
               Info
           </Nav.Link>
         </Nav>
+        {activeRoute === routes.recipes && <SearchBar submitButton={submitButton}/>}
       </Container>
     </Navbar>
   );

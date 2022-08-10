@@ -34,38 +34,34 @@ function getArrayofRandomUniqueNumbers(length,maxVal) {
  * @param {[]} data List of recipes
  * @returns {{}} paginated json.
  */
-function paginate(data) {
-  return (req, res, next) => {
-    minLimit = 1
-    maxLimit = 4
-    const limit = parseInt(req.query.limit) ? Math.min(Math.max(parseInt(req.query.limit),minLimit),maxLimit) : maxLimit;
-    minPage = 1
-    maxPage = Math.ceil(data.length / limit)
-    const page = parseInt(req.query.page) ? Math.min(Math.max(parseInt(req.query.page),minPage),maxPage) : minPage;
+function paginate(data,queryLimit,queryPage) {
+  minLimit = 1
+  maxLimit = 4
+  const limit = parseInt(queryLimit) ? Math.min(Math.max(parseInt(queryLimit),minLimit),maxLimit) : maxLimit;
+  minPage = 1
+  maxPage = Math.ceil(data.length / limit)
+  const page = parseInt(queryPage) ? Math.min(Math.max(parseInt(queryPage),minPage),maxPage) : minPage;
 
-    const startIndex = (page - 1) * limit;
-    const endIndex = page * limit;
-    const nextPage = (endIndex < data.length) ? page + 1 : null
+  const startIndex = (page - 1) * limit;
+  const endIndex = page * limit;
+  // const nextPage = (endIndex < data.length) ? page + 1 : null
 
-    let result = {};
-    let paging = {};
-    if (endIndex < data.length) {
-      paging.nextPage = page + 1
-    }
-    if (startIndex > 1) {
-      paging.previousPage = page - 1
-    }
-    paging = {...paging,currentPage: page, lastPage: maxPage};
-    result={paging: paging, data: data.slice(startIndex, endIndex)};
-    
-    res.paginatedResult = result;
-    next();
+  let result = {};
+  let paging = {};
+  if (endIndex < data.length) {
+    paging.nextPage = page + 1
   }
+  if (startIndex > 1) {
+    paging.previousPage = page - 1
+  }
+  paging = {...paging,currentPage: page, lastPage: maxPage, startIndex: startIndex, endIndex: endIndex};
+  return {paging: paging, data: data.slice(startIndex, endIndex)};
+  
 }
 
-/* GET paginated list of recipes. */
-router.get('/', paginate(ingredientsJson.recipes), function(req, res, next) {
-  res.json(res.paginatedResult);
+/* GET paginated list of all recipes. */
+router.get('/', function(req, res, next) {
+  res.json(paginate(ingredientsJson.recipes, req.query.limit, req.query.page));
 });
 
 /* GET random list of recipe. */
@@ -76,7 +72,18 @@ router.get('/random', function(req, res, next) {
 });
 
 /* GET recipe with specific id. */
-router.get('/:id', function(req, res, next) {
+router.get('/search', function(req, res, next) {
+  const query = req.query.q
+  const recipeArr = ingredientsJson.recipes.filter(
+    recipe => {return recipe.title.toLowerCase().includes(query);}
+  );
+  recipeArr.length > 0 ? 
+    res.json(paginate(recipeArr, req.query.limit, req.query.page)) :
+    res.status(404).send('Recipes not found');
+});
+
+/* GET recipe with specific id. */
+router.get('/id/:id', function(req, res, next) {
   const id = req.params.id; 
   for (let recipe of ingredientsJson.recipes) {
     if (recipe.id.toString() === id) {
@@ -84,8 +91,9 @@ router.get('/:id', function(req, res, next) {
       return;
     }
   }
-  res.status(404).send('Book not found');
+  res.status(404).send('Recipe not found');
 });
+
 
 
 module.exports = router;
