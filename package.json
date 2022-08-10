@@ -10,8 +10,6 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
-    "bootstrap": "^5.2.0",
-    "bootstrap-icons": "^1.9.1",
     "concurrently": "^3.5.1"
   }
 }
