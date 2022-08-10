@@ -1,7 +1,7 @@
 import Pagination from 'react-bootstrap/Pagination';
 
 export const Paginator = props => {
-  const { currentPage, previousPage, nextPage, lastPage, handleClick} = props;
+  const { currentPage, previousPage, nextPage, lastPage, handlePageRequest} = props;
 
   const pagePriority = [
     currentPage,
@@ -22,14 +22,14 @@ export const Paginator = props => {
 
   return (
     <Pagination>
-      <Pagination.Prev disabled={!previousPage} onClick={() => {handleClick(previousPage)}}/>
+      <Pagination.Prev disabled={!previousPage} onClick={() => {handlePageRequest(previousPage)}}/>
       
-      {pageArr.map((page,index) => <Pagination.Item key={page} active={page === currentPage ? true : false}  onClick={() => {handleClick(page)}}>
+      {pageArr.map((page,index) => <Pagination.Item key={page} active={page === currentPage ? true : false}  onClick={() => {handlePageRequest(page)}}>
         {page}
         </Pagination.Item>
         )}
 
-      <Pagination.Next  disabled={!nextPage} onClick={() => {handleClick(nextPage)}} />
+      <Pagination.Next  disabled={!nextPage} onClick={() => {handlePageRequest(nextPage)}} />
     </Pagination>
   );
 }

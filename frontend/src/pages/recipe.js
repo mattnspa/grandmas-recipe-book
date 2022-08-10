@@ -11,7 +11,7 @@ export const RecipePage = () => {
 
   useEffect(() => {
     const fetchData = async (id) => {
-      const result = await FetchRecipe(`/${id}`);
+      const result = await FetchRecipe(`/id/${id}`);
       setRecipe(result)
     };
 
