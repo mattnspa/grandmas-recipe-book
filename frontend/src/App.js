@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"
+import { useLocation, Routes, Route } from "react-router-dom"
 
 import { NavbarComponent } from "./components/navbar";
 import { HomePage } from "./pages/home";
@@ -7,9 +7,11 @@ import { RecipePage } from "./pages/recipe";
 import { AllRecipesPage } from "./pages/allRecipes";
 
 function App() {
+ const location = useLocation();
+
   return (
     <div className="App">
-      <NavbarComponent />
+      <NavbarComponent location={location.pathname} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/info" element={<InfoPage />} />
