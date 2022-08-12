@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 
 import ImgPath from "./nav-icon-light.svg";
-import { SearchBar } from './searchbar';
+import { SearchBar } from '../search/searchbar';
 
 export const NavbarComponent = props => {
   const { activeRoute, setActiveRoute, submitButton } = props;

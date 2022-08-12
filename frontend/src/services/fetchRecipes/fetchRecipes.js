@@ -7,14 +7,14 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
  * @param {string} slug 
  * @returns 
  */
-export const FetchRecipe = async (slug,controller,setLoading,setRecipes) => {
+export const FetchRecipe = async (slug,controller) => {
   slug = slug || ""
-  axios(`${BASE_URL}/api/recipes${slug}`,{signal: controller.signal})
+  const result = await axios(`${BASE_URL}/api/recipes${slug}`,{signal: controller.signal})
     .then(res => {
-      setRecipes(res.data)
-      setLoading(false);
+      return res.data;
     })
     .catch((err) => {
       console.log(err)
     });
+  return result;
 }

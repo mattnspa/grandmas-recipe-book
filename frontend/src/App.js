@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation, Routes, Route } from "react-router-dom"
 
-import { NavbarComponent } from "./components/navbar";
+import { NavbarComponent } from "./components/navbar/navbar";
 import { HomePage } from "./pages/home";
 import { InfoPage } from "./pages/info";
 import { RecipePage } from "./pages/recipe";
