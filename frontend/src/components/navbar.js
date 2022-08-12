@@ -17,13 +17,17 @@ export const NavbarComponent = props => {
     info: "/info"
   };
 
+  const handleClick = (route) => {
+    setActiveRoute(route);
+  }
+
   return (
     <Navbar bg="dark" variant="dark" >
       <Container>
       <Navbar.Brand reloadDocument={activeRoute === routes.home ? true : false}
         as={Link} 
         to={routes.home}
-        onClick={() => {setActiveRoute(routes.home)}}>
+        onClick={() => {handleClick(routes.home)}}>
           <img
             src={ImgPath}
             width="30"
@@ -36,14 +40,14 @@ export const NavbarComponent = props => {
             as={Link} 
             to={routes.recipes} 
             active={activeRoute === routes.recipes}
-            onClick={() => {setActiveRoute(routes.recipes)}}>
+            onClick={() => {handleClick(routes.recipes)}}>
               Recipes
           </Nav.Link>
           <Nav.Link reloadDocument={activeRoute === routes.info ? true : false}
             as={Link} 
             to={routes.info} 
             active={activeRoute === routes.info}
-            onClick={() => {setActiveRoute(routes.info)}}>
+            onClick={() => {handleClick(routes.info)}}>
               Info
           </Nav.Link>
         </Nav>

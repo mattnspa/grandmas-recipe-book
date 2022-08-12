@@ -1,7 +1,7 @@
 import Pagination from 'react-bootstrap/Pagination';
 
 export const Paginator = props => {
-  const { currentPage, previousPage, nextPage, lastPage, handlePageRequest} = props;
+  const { currentPage, previousPage, nextPage, lastPage, pageChange} = props;
 
   const pagePriority = [
     currentPage,
@@ -20,6 +20,9 @@ export const Paginator = props => {
   const pageArr = uniquePageArr.slice(0,5)
   pageArr.sort();
 
+  const handlePageRequest = (page) => {
+    pageChange(`?page=${page}`);
+  }
   return (
     <Pagination>
       <Pagination.Prev disabled={!previousPage} onClick={() => {handlePageRequest(previousPage)}}/>

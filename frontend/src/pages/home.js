@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/esm/Button";
 import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
@@ -10,21 +9,24 @@ import { Loading } from "../components/loading";
 import { RecipeCard } from "../components/recipeCards";
 import { FetchRecipe } from "../services/fetchRecipes";
 
-export const HomePage = () => {
+export const HomePage = props => {
+  const [loading, setLoading] = useState(true);
   const [recipes, setRecipes] = useState([]);
-  const [isLoading, setLoading] = useState(true);
+  const slug = "/random"
 
   useEffect(() => {
+    const controller = new AbortController();
     const fetchData = async () => {
-      const results = await FetchRecipe("/random");
-      setRecipes(results);
-      setLoading(false);
-    };
+      await FetchRecipe(slug, controller, setLoading, setRecipes)
+    }
+    fetchData()
+    return () => {
+      controller.abort()
+    }
+  },[slug])
 
-    fetchData();
-  }, []);
 
-  if (isLoading) return (<Loading />);
+  if (loading) return (<Loading />);
 
   return (
     <div>
@@ -39,7 +41,7 @@ export const HomePage = () => {
         <div className="d-flex align-items-end flex-column p-2">
           <Button as={Link} to="/recipes" variant="secondary">
             See all 
-            <i class="bi bi-chevron-right"></i>
+            <i className="bi bi-chevron-right"></i>
           </Button>
         </div>
       </Card>

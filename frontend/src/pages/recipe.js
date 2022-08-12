@@ -3,20 +3,27 @@ import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container"
 import { useParams } from "react-router-dom";
 
+import { Loading } from "../components/loading";
 import { FetchRecipe } from "../services/fetchRecipes";
 
 export const RecipePage = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const slug = `/id/${id}`;
 
   useEffect(() => {
-    const fetchData = async (id) => {
-      const result = await FetchRecipe(`/id/${id}`);
-      setRecipe(result)
-    };
+    const controller = new AbortController();
+    const fetchData = async () => {
+      await FetchRecipe(slug, controller, setLoading, setRecipe)
+    }
+    fetchData()
+    return () => {
+      controller.abort()
+    }
+  },[slug])
 
-    fetchData(id);
-  }, [id]);
+  if (loading) return (<Loading />);
 
   return (
     <Container className="mt-5">
