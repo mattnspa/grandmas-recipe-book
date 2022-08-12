@@ -10,11 +10,17 @@ import { AllRecipesPage } from "./pages/allRecipes";
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [slug, setSlug] = useState("");
+  const [activeRoute, setActiveRoute] = useState("");
   const location = useLocation();
 
+
   useEffect(() => {
-      setSlug(searchQuery)
-    },[searchQuery]);
+    setSlug(searchQuery)
+  },[searchQuery]);  
+    
+  useEffect(() => {
+    setActiveRoute(location.pathname)
+  },[location.pathname]);
 
   const submitButton = (submittedQuery) => {
     setSearchQuery(`/search?q=${submittedQuery}`);
@@ -33,9 +39,9 @@ function App() {
 
   return (
     <div className="App">
-      <NavbarComponent location={location.pathname} submitButton={submitButton}/>
+      <NavbarComponent activeRoute={activeRoute} setActiveRoute={setActiveRoute} submitButton={submitButton}/>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage setActiveRoute={setActiveRoute} />} />
         <Route path="/info" element={<InfoPage />} />
         <Route path="/recipes" element={<AllRecipesPage pageChange={pageChange} slug={slug} />} />
         <Route path="/recipes/:id" element={<RecipePage />} />

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,9 +7,8 @@ import ImgPath from "./nav-icon-light.svg";
 import { SearchBar } from './searchbar';
 
 export const NavbarComponent = props => {
-  const { submitButton, location } = props;
-  const [activeRoute, setActiveRoute] = useState(location);
-
+  const { activeRoute, setActiveRoute, submitButton } = props;
+  
   const routes = {
     home: "/",
     recipes: "/recipes",
