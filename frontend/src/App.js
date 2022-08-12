@@ -19,6 +19,7 @@ function App() {
   const submitButton = (submittedQuery) => {
     setSearchQuery(`/search?q=${submittedQuery}`);
   };
+
   const pageChange = (pageRequestSlug) => {
     const createdQuery = `${searchQuery}${pageRequestSlug}`
     const sanitizedQuery = createdQuery

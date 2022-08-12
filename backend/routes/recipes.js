@@ -40,7 +40,8 @@ router.get('/random', function(req, res, next) {
 
 /* GET recipe with specific id. */
 router.get('/search', function(req, res, next) {
-  const query = req.query.q.toLowerCase()
+  let query = "";
+  if (req.query.q) query = req.query.q.toLowerCase();
   const recipeArr = ingredientsJson.recipes.filter(
     recipe => {return recipe.title.toLowerCase().includes(query);}
   );
