@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component is loaded snapshot is the same 1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar navbar-expand navbar-dark bg-dark"
+    data-testid="navbar"
+  >
+    <div
+      class="container"
+    >
+      <a
+        class="navbar-brand"
+        data-testid="home-link"
+        href="/"
+      >
+        <img
+          alt="React Bootstrap logo"
+          class="d-inline-block align-top"
+          height="30"
+          src="nav-icon-light.svg"
+          width="30"
+        />
+      </a>
+      <div
+        class="me-auto navbar-nav"
+      >
+        <a
+          class="nav-link"
+          data-testid="recipes-link"
+          href="/recipes"
+        >
+          Recipes
+        </a>
+        <a
+          class="nav-link"
+          data-testid="info-link"
+          href="/info"
+        >
+          Info
+        </a>
+      </div>
+    </div>
+  </nav>
+  <h1>
+    home page
+  </h1>
+</DocumentFragment>
+`;

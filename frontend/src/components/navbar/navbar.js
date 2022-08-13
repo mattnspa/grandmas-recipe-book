@@ -20,9 +20,9 @@ export const NavbarComponent = props => {
   }
 
   return (
-    <Navbar bg="dark" variant="dark" >
+    <Navbar data-testid={'navbar'} bg="dark" variant="dark" >
       <Container>
-      <Navbar.Brand reloadDocument={activeRoute === routes.home ? true : false}
+      <Navbar.Brand data-testid={'home-link'} reloadDocument={activeRoute === routes.home ? true : false}
         as={Link} 
         to={routes.home}
         onClick={() => {handleClick(routes.home)}}>
@@ -34,14 +34,14 @@ export const NavbarComponent = props => {
             alt="React Bootstrap logo" />
         </Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link reloadDocument={activeRoute === routes.recipes ? true : false}
+          <Nav.Link data-testid={'recipes-link'} reloadDocument={activeRoute === routes.recipes ? true : false}
             as={Link} 
             to={routes.recipes} 
             active={activeRoute === routes.recipes}
             onClick={() => {handleClick(routes.recipes)}}>
               Recipes
           </Nav.Link>
-          <Nav.Link reloadDocument={activeRoute === routes.info ? true : false}
+          <Nav.Link data-testid={'info-link'} reloadDocument={activeRoute === routes.info ? true : false}
             as={Link} 
             to={routes.info} 
             active={activeRoute === routes.info}
