@@ -2,18 +2,38 @@
   "recipes": [
     {
       "id":1,
-      "title":"Cake",
-      "subtitle":"Some sort of short description",
+      "title":"Rock Buns",
+      "subtitle":"This recipe is one of my stables. It's easy and quick and nothing can really go wrong. They're especially good with a cup of tea.",
       "ingredients": [
         {
-          "name":"flour",
+          "name":"self-raising flour",
+          "size":"200",
+          "unit":"g"
+        },
+        {
+          "name":"salt",
+          "size":"1",
+          "unit":"pinch"
+        },
+        {
+          "name":"margarine",
           "size":"100",
           "unit":"g"
         },
         {
-          "name":"water",
+          "name":"sugar (I prefer brown sugar)",
           "size":"100",
-          "unit":"ml"
+          "unit":"g"
+        },
+        {
+          "name":"currants",
+          "size":"75",
+          "unit":"g"
+        },
+        {
+          "name":"mixed peel",
+          "size":"25",
+          "unit":"g"
         },
         {
           "name":"egg",
@@ -21,33 +41,34 @@
           "unit":""
         },
         {
-          "name":"baking-powder",
-          "size":"7",
-          "unit":"g"
+          "name":"milk",
+          "size":"",
+          "unit":"a little to mix"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Mix the flour and salt, rub in the margarine.",
+        "Stir in the sugar, currants and peel.",
+        "Mix to a stiff dough with egg and milk.",
+        "Place in rough heaps on a greased baking tray.",
+        "Bake in a moderately hot oven, 200&deg;C for 15-20 mins."
       ],
       "image": "https://i.imgur.com/8FIsiTh.jpg"
     },
     {
       "id":2,
-      "title":"Roast beef",
-      "subtitle":"Great for sunday lunch",
+      "title":"Chocolate Chip Cookies",
+      "subtitle":"This is another simple recipe. It's best to make them in winter otherwise the chocolate tends to melt and becomes messy.",
       "ingredients": [
         {
-          "name":"flour",
-          "size":"100",
+          "name":"margarine",
+          "size":"75",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
+          "name":"brown sugar",
+          "size":"75",
+          "unit":"g"
         },
         {
           "name":"egg",
@@ -55,32 +76,48 @@
           "unit":""
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"sugar (I prefer brown sugar)",
+          "size":"100",
+          "unit":"g"
+        },
+        {
+          "name":"vanilla essence",
+          "size":"",
+          "unit":"a few drops"
+        },
+        {
+          "name":"self-raising flour",
+          "size":"150",
+          "unit":"g"
+        },
+        {
+          "name":"plain chocolate chopped or chocolate chips",
+          "size":"100",
           "unit":"g"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Cream the margarine and sugar.",
+        "Beat in the egg and essence.",
+        "Stir in the flour, salt and chocolate.",
+        "Place in small spoonfuls on greased baking trays."
       ],
-      "image": "https://i.imgur.com/zjmH0IL.jpg"
-    },{
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
+    },
+    {
       "id":3,
-      "title":"Cake",
-      "subtitle":"Some sort of short description",
+      "title":"Dropped Scones",
+      "subtitle":"A.K.A. Grandma's Pancakes. These can be made at the last minute if you have unexpected guests and you've run out of biscuits and of course one advantage is that you don't need an oven to cook them.",
       "ingredients": [
         {
-          "name":"flour",
+          "name":"self-raising flour",
           "size":"100",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
+          "name":"salt",
+          "size":"1",
+          "unit":"pinch"
         },
         {
           "name":"egg",
@@ -88,66 +125,109 @@
           "unit":""
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"sugar",
+          "size":"50",
           "unit":"g"
+        },
+        {
+          "name":"milk",
+          "size":"",
+          "unit":"to mix"
+        },
+        {
+          "name":"seed oil",
+          "size":"1",
+          "unit":"tbsp"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Mix flour, salt and sugar, add the egg and gradually beat in milk to make a thick butter.",
+        "Heat a non-stick pan and add a small amount of oil. Before you start cooking the scones wipe the pan with a bit of kitchen paper.",
+        "Bake two or three at a time by dropping spoonfuls onto the pan.",
+        "Cook until the underside is golden brown and the top is covered with bubbles.",
+        "Turn and brown on the otherside.",
+        "Serve hot or cold with butter, jam or honey."
       ],
-      "image": "https://i.imgur.com/2DGDjXn.jpg"
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
     },
     {
       "id":4,
-      "title":"Roast beef",
-      "subtitle":"Great for sunday lunch",
+      "title":"Almond Biscuits",
+      "subtitle":"I've just tried them out this afternoon. The results were not brilliant, but I think it's because the gound I used were from Switzerland and not really fine enough. I'm sure the recipe would work better with the English variety.",
       "ingredients": [
         {
-          "name":"flour",
-          "size":"100",
+          "name":"self-raising flour",
+          "size":"150",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
+          "name":"sugar",
+          "size":"75",
+          "unit":"g"
         },
         {
-          "name":"egg",
+          "name":"salt",
           "size":"1",
-          "unit":""
+          "unit":"pinch"
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"ground almonds",
+          "size":"50",
           "unit":"g"
+        },
+        {
+          "name":"margarine",
+          "size":"125",
+          "unit":"g"
+        },
+        {
+          "name":"almond essence",
+          "size":"3",
+          "unit":"drops"
+        },
+        {
+          "name":"blanched almonds",
+          "size":"",
+          "unit":""
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Mix together the dry ingredients, rub in the margarine.",
+        "Add the essence and mix well.",
+        "Roll out thinkly and cut into rounds.",
+        "Place on greased baking tray and bake at 180&deg;C for about 15 minutes."
       ],
-      "image": "https://i.imgur.com/imzpAvT.jpg"
-    },{
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
+    },
+    {
       "id":5,
-      "title":"Cake",
-      "subtitle":"Some sort of short description",
+      "title":"Date and Walnut Loaf",
+      "subtitle":"This is good sliced and severed with butter",
       "ingredients": [
         {
-          "name":"flour",
-          "size":"100",
+          "name":"dates",
+          "size":"200",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
+          "name":"bicarbonate of soda",
+          "size":"1",
+          "unit":"pinch"
+        },
+        {
+          "name":"boiling water",
+          "size":"125",
           "unit":"ml"
+        },
+        {
+          "name":"margarine",
+          "size":"75",
+          "unit":"g"
+        },
+        {
+          "name":"sugar",
+          "size":"75",
+          "unit":"g"
         },
         {
           "name":"egg",
@@ -155,100 +235,192 @@
           "unit":""
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"self-raising flour",
+          "size":"200",
+          "unit":"g"
+        },
+        {
+          "name":"walnuts",
+          "size":"75",
           "unit":"g"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Chop the dates, add the bicarbonate and pour boiling water over them.",
+        "Cream the margarine and sugar, beat in the egg.",
+        "Stir in the flour and lastly, the dates",
+        "Place the mixtrure in a loaf tin lined with grease proof paper.",
+        "Bake in a moderate oven 180&deg;C for about 1 1/4 hours"
       ],
-      "image": "https://i.imgur.com/eJFkZiE.jpg"
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
     },
     {
       "id":6,
-      "title":"Roast beef",
-      "subtitle":"Great for sunday lunch",
+      "title":"Orange and Raisin Loaf",
+      "subtitle":"I don't think this is quite so nice as the date loaf but you might not agree.",
       "ingredients": [
         {
-          "name":"flour",
+          "name":"lard",
+          "size":"25",
+          "unit":"g"
+        },
+        {
+          "name":"bicarbonate of soda",
+          "size":"1/2",
+          "unit":"tsp"
+        },
+        {
+          "name":"margarine",
+          "size":"25",
+          "unit":"g"
+        },
+        {
+          "name":"sugar",
           "size":"100",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
+          "name":"self-raising flour",
+          "size":"200",
+          "unit":"g"
         },
         {
-          "name":"egg",
-          "size":"1",
+          "name":"grated rind and juice of 1/2 orange",
+          "size":"",
           "unit":""
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"raisins",
+          "size":"150",
           "unit":"g"
+        },
+        {
+          "name":"milk",
+          "size":"125",
+          "unit":"ml"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Mix flour and bicarbonate of soda, rub in fats.",
+        "Mix in sugar, orange rind and raisins.",
+        "Make the juice of the 1/2 orange up to 200ml with milk.",
+        "Add the dry ingredients and mix well.",
+        "Place the mixture in a greased loaf tin.",
+        "Bake in a moderate oven 160&deg;C for about 1 1/2 hours."
       ],
-      "image": "https://i.imgur.com/OfXA2oT.jpg"
-    },{
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
+    },
+    {
       "id":7,
-      "title":"Cake",
-      "subtitle":"Some sort of short description",
+      "title":"Simnel Cake",
+      "subtitle":"Young Francesco, who is rather fussy about food, really likes this rich cake, perhaps as a true Sicilian he likes the marzipan in it.",
       "ingredients": [
         {
-          "name":"flour",
+          "name":"butter or margarine",
+          "size":"150",
+          "unit":"g"
+        },
+        {
+          "name":"brown sugar",
+          "size":"150",
+          "unit":"g"
+        },
+        {
+          "name":"eggs",
+          "size":"3",
+          "unit":""
+        },
+        {
+          "name":"self-raising flour",
+          "size":"225",
+          "unit":"g"
+        },
+        {
+          "name":"salt",
+          "size":"1",
+          "unit":"pinch"
+        },
+        {
+          "name":"mixed spice",
+          "size":"1/2",
+          "unit":"tsp"
+        },
+        {
+          "name":"milk",
+          "size":"5",
+          "unit":"tbsp"
+        },
+        {
+          "name":"golden syrup",
+          "size":"2",
+          "unit":"tsp"
+        },
+        {
+          "name":"currants",
+          "size":"450",
+          "unit":"g"
+        },
+        {
+          "name":"raisins",
+          "size":"50",
+          "unit":"g"
+        },
+        {
+          "name":"sultanas",
           "size":"100",
           "unit":"g"
         },
         {
-          "name":"water",
+          "name":"mixed peel",
           "size":"100",
-          "unit":"ml"
+          "unit":"g"
         },
         {
-          "name":"egg",
-          "size":"1",
-          "unit":""
+          "name":"glace cherries quatered",
+          "size":"25",
+          "unit":"g"
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"almon paste",
+          "size":"450",
           "unit":"g"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Beat fat and sugar until light and fluffy.",
+        "Add eggs one at a time with a little flour, beating well after each addition.",
+        "Stir salt and spice, add milk and syrup with a little more flour.",
+        "Fold in remaining flour and fruit. Place half the mixture into a greased and lined 20.5cm round cake tin and cmooth level.",
+        "Divide the almon paste into two. Roll out one 20.5cm piece on sugared greaseproof paper and place on top of the cake mixtue.",
+        "Cover with remaining cake mixture. Bake for 1 hour at 180&deg;C, and then 2.5 hours at 140&deg;C.",
+        "Allow cake to cool, divide the remaining almond paste in two. Roll one half into 20.5cm and place them on the cake. You can make them stick on the cake with some apricote jam."
       ],
-      "image": "https://i.imgur.com/JTkjR7r.jpg"
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
     },
     {
       "id":8,
-      "title":"Roast beef",
-      "subtitle":"Great for sunday lunch",
+      "title":"Hot Cross Buns",
+      "subtitle":"This is another Easter recipe. They're good for Easter morning breakfast.",
       "ingredients": [
         {
-          "name":"flour",
-          "size":"100",
+          "name":"plain flour",
+          "size":"250",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
+          "name":"salt",
+          "size":"1",
+          "unit":"pinch"
+        },
+        {
+          "name":"sugar",
+          "size":"25",
+          "unit":"g"
+        },
+        {
+          "name":"margarine",
+          "size":"50",
+          "unit":"g"
         },
         {
           "name":"egg",
@@ -256,166 +428,239 @@
           "unit":""
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"warm water",
+          "size":"100",
+          "unit":"ml"
+        },
+        {
+          "name":"fresh yeast (or 3 teaspoons dried yeast)",
+          "size":"15",
+          "unit":"g"
+        },
+        {
+          "name":"mixed spice",
+          "size":"1",
+          "unit":"tsp"
+        },
+        {
+          "name":"currants",
+          "size":"25",
+          "unit":"g"
+        },
+        {
+          "name":"sultanas",
+          "size":"25",
+          "unit":"g"
+        },
+        {
+          "name":"cut mixed peel",
+          "size":"25",
           "unit":"g"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Mix flour, salt and sugar in a bowl, rub in margarine. Then add the fruit and peel.",
+        "Add yeast liquid (yeast mixed with wwarm water) and beaten egg to flour, knead well.",
+        "Leave to rise in a warm place for 45 - 60 minutes.",
+        "Turn dough on to lightly floured surface and kneed again lightly.",
+        "Divide dough into 8 equal pieces. Shape into buns.",
+        "Place on a greased baking tray, leave in a warm place until double in size.",
+        "Make crosses by cutting the tops witha knife.",
+        "Bake in hot oven 220&deg;C for 15 - 20 minutes.",
+        "Brush with a hot sugar glaze."
       ],
-      "image": "https://i.imgur.com/6ldknnX.jpg"
-    },{
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
+    },
+    {
       "id":9,
-      "title":"Cake",
-      "subtitle":"Some sort of short description",
+      "title":"Apple Dumplings",
+      "subtitle":"I wonder why these are called dumplings, because dumplings are boiled while these are baked. Anyway, it's a nice winter sweet and a good way of using smallish apples.",
       "ingredients": [
         {
-          "name":"flour",
+          "name":"plain or self-raising flour",
+          "size":"200",
+          "unit":"g"
+        },
+        {
+          "name":"salt",
+          "size":"1",
+          "unit":"pinch"
+        },
+        {
+          "name":"fat (either all margarine or half lard and half margarine)",
           "size":"100",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
+          "name":"cold water to mix",
+          "size":"2",
+          "unit":"tbsp"
         },
         {
-          "name":"egg",
-          "size":"1",
+          "name":"cooking apples",
+          "size":"4 or 5",
           "unit":""
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"sugar",
+          "size":"50",
           "unit":"g"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Make the pastry. Mix flour and salt in basin, rub in fat. Using a knife to cut and stir, mix with cold water to form a stiff paste.",
+        "Turn dough on to a floured and roll out.",
+        "Peel and core apples.",
+        "Divide pastry into 4 or 5 and roll each piece out to a round.",
+        "Stand apples on pastry, fill the centres with sugar, draw up the pastry using a little water to damp and seal the edges firmly.",
+        "Place the dumplings on a greased baking tray.",
+        "Bake in a moderate oven 190&deg;C for 30-40 minutes until the apple is tender.",
+        "Dust with caster sugar.",
+        "Serve with cream or custard."
       ],
-      "image": "https://i.imgur.com/kf7xorX.jpg"
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
     },
     {
       "id":10,
-      "title":"Roast beef",
-      "subtitle":"Great for sunday lunch",
+      "title":"Bara Brith",
+      "subtitle":"This is a recipe that was given to me years ago . We were staying in a village called Yateley, which is actually quite near Reading with some Italian students and the host \\“mother\\” used to put slices of this in the packed lunches. I thought it was so good that I asked her for the recipe. So this BARA BRITH, perhaps originally from Wales.",
       "ingredients": [
         {
-          "name":"flour",
-          "size":"100",
+          "name":"sultanas",
+          "size":"360",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
+          "name":"dark soft brown sugar",
+          "size":"240",
+          "unit":"g"
         },
         {
-          "name":"egg",
+          "name":"hot tea",
+          "size":"1/4",
+          "unit":"pint"
+        },
+        {
+          "name":"self-rising flour ",
+          "size":"300",
+          "unit":"g"
+        },
+        {
+          "name":"beaten egg",
           "size":"1",
           "unit":""
-        },
-        {
-          "name":"baking-powder",
-          "size":"7",
-          "unit":"g"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Put fruit and sugar in a bowl and pour over hot tea, stir well, cover and leave to stand overnight.",
+        "Grease and line with greaseproof paper a large loaf tin.",
+        "Stir flour and beaten egg into fruit, mix thoroughly.",
+        "Bake in a slow over (150&deg;C) for about 3/4 hours or until it has risen and shrunk away from the sides of the tin.",
+        "Turn out and leave to cool.",
+        "Serve sliced with butter. "
       ],
-      "image": "https://i.imgur.com/3Ckanoe.jpg"
-    },{
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
+    },
+    {
       "id":11,
-      "title":"Cake",
-      "subtitle":"Some sort of short description",
+      "title":"Torta di Cioccolata",
+      "subtitle":"This receipe comes from a Swiss friend of Zia Lidia's. She gave instructions that it should be kept a secret, but that seems silly for something as good as this.......",
       "ingredients": [
         {
-          "name":"flour",
-          "size":"100",
+          "name":"dark chocolate",
+          "size":"200",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
-        },
-        {
-          "name":"egg",
-          "size":"1",
+          "name":"eggs",
+          "size":"4",
           "unit":""
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"sugar",
+          "size":"5",
+          "unit":"tbsp"
+        },
+        {
+          "name":"flour",
+          "size":"2",
+          "unit":"tbsp"
+        },
+        {
+          "name":"butter",
+          "size":"100",
           "unit":"g"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Melt the chocolate in the butter.",
+        "Beat the egg yolks with the sugar and egg whites.",
+        "Add the flour to the egg yolks.",
+        "Pour all the mixture into the liquefied chocolate.",
+        "Mix well and then pour into a greased cake tin.",
+        "Put in a very hot oven for 10-15 minutes.",
+        "When it is cold, put it in the fridge as long as you need it.",
+        "Serve it upside down on a plate."
       ],
-      "image": "https://i.imgur.com/JxaPPz9.jpg"
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
     },
     {
       "id":12,
-      "title":"Roast beef",
-      "subtitle":"Great for sunday lunch",
+      "title":"Berry Upside-Down Cake",
+      "subtitle":"This is a recipe that Nicola sent me. You have to be careful that it is cooked through before taking it out of the oven. The first time I made it it was a real mess, because I hadn't taken enough care that the raspberries were properly defrosted.",
       "ingredients": [
         {
-          "name":"flour",
-          "size":"100",
+          "name":"frozen mixed berries",
+          "size":"500",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
-        },
-        {
-          "name":"egg",
-          "size":"1",
+          "name":"eggs",
+          "size":"4",
           "unit":""
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"sugar",
+          "size":"125",
+          "unit":"g"
+        },
+        {
+          "name":"plain flour",
+          "size":"125",
           "unit":"g"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "You will need a 20.5cm square cake tin, greased and the base lined with greaseproof paper.",
+        "Preheat oven 180&deg;C or 170&deg;C in a fan oven",
+        "Scatter berries over base of cake tin.",
+        "In a large bowl, add eggs and sugar, then whisk over a bowl of hot water for about 10 mins, till very pale and thick.",
+        "Gently fold in flour in three batches, then spoon mixture evenly over berries.",
+        "Cook for about 35-40 minutes till golden brown.",
+        "Serve warm or cold, if you like with cream or Greek yogurt"
+        
       ],
-      "image": "https://i.imgur.com/2qgnAl3.jpg"
-    },{
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
+    },
+    {
       "id":13,
-      "title":"Cake",
-      "subtitle":"Some sort of short description",
+      "title":"Breadcake",
+      "subtitle":"This is another recipe from Zia Lidia. It's a good way of using up dry bread and it's very tasty. By the way as it's filling you only need small squares.",
       "ingredients": [
         {
-          "name":"flour",
-          "size":"100",
+          "name":"dried bread",
+          "size":"300",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
+          "name":"milk",
+          "size":"1",
+          "unit":"L"
+        },
+        {
+          "name":"amaretti",
+          "size":"5",
+          "unit":""
         },
         {
           "name":"egg",
@@ -423,186 +668,325 @@
           "unit":""
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"salt",
+          "size":"1",
+          "unit":"pinch"
+        },
+        {
+          "name":"juce of 1 lemon",
+          "size":"",
+          "unit":""
+        },
+        {
+          "name":"zest of 1 lemon",
+          "size":"",
+          "unit":""
+        },
+        {
+          "name":"sugar",
+          "size":"150",
+          "unit":"g"
+        },
+        {
+          "name":"grappa",
+          "size":"4",
+          "unit":"tbsp"
+        },
+        {
+          "name":"cocoa",
+          "size":"1",
+          "unit":"tbsp"
+        },
+        {
+          "name":"raisins",
+          "size":"200",
+          "unit":"g"
+        },
+        {
+          "name":"vanilla extract",
+          "size":"1",
+          "unit":"drop"
+        },
+        {
+          "name":"pine nuts",
+          "size":"50",
           "unit":"g"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Pour the boiling milk over the bread and let it rest for at least 4 hours.",
+        "Then knead it with your hands.",
+        "Crumble the amaretti and add them to the mass with the other ingredients (minus the pine nuts).",
+        "Pour the contents into a greased pan garnish with pine nuts and bake in a hot oven at 200&deg;C for about 1 hour and a half."
       ],
-      "image": "https://i.imgur.com/rpfajMd.jpg"
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
     },
     {
       "id":14,
-      "title":"Roast beef",
-      "subtitle":"Great for sunday lunch",
+      "title":"Chocolate Banana Cake",
+      "subtitle":"This is a recipe sent to me by Auntie Susie, Mike's wife, who is a vegan. I haven't tried it yet, but it looks tasty.",
       "ingredients": [
         {
-          "name":"flour",
-          "size":"100",
+          "name":"plain flour",
+          "size":"225",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
+          "name":"cocoa powder",
+          "size":"50",
+          "unit":"g"
         },
         {
-          "name":"egg",
-          "size":"1",
+          "name":"baking powder",
+          "size":"2",
+          "unit":"tsp"
+        },
+        {
+          "name":"ripe bananas",
+          "size":"3",
           "unit":""
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"milk",
+          "size":"150",
+          "unit":"ml"
+        },
+        {
+          "name":"sugar",
+          "size":"200",
           "unit":"g"
+        },
+        {
+          "name":"vanilla essence",
+          "size":"3",
+          "unit":"drops"
+        },
+        {
+          "name":"margarine",
+          "size":"100",
+          "unit":"g"
+        },
+        {
+          "name":"Filling:",
+          "size":"",
+          "unit":""
+        },
+        {
+          "name":"margarine",
+          "size":"175",
+          "unit":"g"
+        },
+        {
+          "name":"sugar",
+          "size":"100",
+          "unit":"g"
+        },
+        {
+          "name":"coca powder",
+          "size":"1",
+          "unit":"tbsp"
+        },
+        {
+          "name":"orange juice",
+          "size":"1",
+          "unit":"splash"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Preheat oven to 180&deg;C.",
+        "Sift the flour, cocoa powder and baking powder together.",
+        "Mix together the bananas, milk, sugar and vanilla essence in a blender.",
+        "Pour the banana mixture and melted margarine into the dry ingredients and mix thoroughly.",
+        "Grease two 7 inch cake tins and pour half the cake mixture into each.",
+        "Cook in the centre of the oven for about 45 minutes.",
+        "Cool on a wire rack.",
+        "Cream the filling ingredients together, add a tiny splash of orange juice if the mixture is too stiff.",
+        "Sandwich the two cakes together with two third of the filling and spread the rest over the top ."
       ],
-      "image": "https://i.imgur.com/NoJujtZ.jpg"
-    },{
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
+    },
+    {
       "id":15,
-      "title":"Cake",
-      "subtitle":"Some sort of short description",
+      "title":"The Easy Peach and Almond Cake",
+      "subtitle":"",
       "ingredients": [
         {
-          "name":"flour",
+          "name":"peaches",
+          "size":"700",
+          "unit":"g"
+        },
+        {
+          "name":"butter/margarine",
+          "size":"175",
+          "unit":"g"
+        },
+        {
+          "name":"sugar",
+          "size":"150",
+          "unit":"g"
+        },
+        {
+          "name":"self-rising flour",
+          "size":"175",
+          "unit":"g"
+        },
+        {
+          "name":"baking powder",
+          "size":"1/2",
+          "unit":"tsp"
+        },
+        {
+          "name":"ground almonds",
+          "size":"1",
+          "unit":"heaped tbsp"
+        },
+        {
+          "name":"beaten eggs",
+          "size":"3",
+          "unit":""
+        },
+        {
+          "name":"For the Caramel:",
+          "size":"",
+          "unit":""
+        },
+        {
+          "name":"sugar",
           "size":"100",
           "unit":"g"
         },
         {
           "name":"water",
-          "size":"100",
-          "unit":"ml"
-        },
-        {
-          "name":"egg",
-          "size":"1",
-          "unit":""
-        },
-        {
-          "name":"baking-powder",
-          "size":"7",
-          "unit":"g"
+          "size":"3",
+          "unit":"tbsp"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Grease a deep 7in. cake tin.",
+        "Cook sugar and water until deep golden caramel, use a metal spoon to stir.",
+        "Pour over base and sides of cake tin.",
+        "Halve peaches and cover the base completely, even pile them up a little.",
+        "Cream butter and sugar.",
+        "Fold in half dry ingredients and half beaten eggs. Repeat.",
+        "Spoon mixture over fruit.",
+        "Bake at 180&deg;C for abour 1 hour or until a skewer tests clean.",
+        "Turn out while still warm and serve with cream."
       ],
-      "image": "https://i.imgur.com/28q2BA8.jpg"
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
     },
     {
       "id":16,
-      "title":"Roast beef",
-      "subtitle":"Great for sunday lunch",
+      "title":"Albran Loaf",
+      "subtitle":"This is a recipe that Hazel gave me. It's very good and keeps for ages.",
       "ingredients": [
         {
-          "name":"flour",
-          "size":"100",
+          "name":"Albran",
+          "size":"120",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
+          "name":"sugar",
+          "size":"150",
+          "unit":"g"
         },
         {
-          "name":"egg",
-          "size":"1",
-          "unit":""
+          "name":"mixed dried fruit",
+          "size":"300",
+          "unit":"g"
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"milk",
+          "size":"1/2",
+          "unit":"pint"
+        },
+        {
+          "name":"self-rising flour",
+          "size":"120",
           "unit":"g"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Soak Albran, Fruit and sugar with 1/2 pint of milk for 1/2 an hour.",
+        "Add flour and stir well.",
+        "Bake for 1 and 1/4 hours at 180&deg;C"
       ],
-      "image": "https://i.imgur.com/zjmH0IL.jpg"
-    },{
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
+    },
+    {
       "id":17,
-      "title":"Cake",
-      "subtitle":"Some sort of short description",
+      "title":"Plum Tarte Tatin",
+      "subtitle":"",
       "ingredients": [
         {
-          "name":"flour",
-          "size":"100",
+          "name":"plain flour",
+          "size":"175",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
+          "name":"chilled butter",
+          "size":"200",
+          "unit":"g"
         },
         {
-          "name":"egg",
-          "size":"1",
-          "unit":""
+          "name":"sugar",
+          "size":"150",
+          "unit":"g"
         },
         {
-          "name":"baking-powder",
-          "size":"7",
+          "name":"plums",
+          "size":"750",
+          "unit":"g"
+        },
+        {
+          "name":"self-rising flour",
+          "size":"120",
           "unit":"g"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "To make the pastry, put the floor in a food processor with 125g butter, 25g sugar. Pulse until the mixture resembles fine crumbs, then add 2-3 tbsp cold water and pulse until mixture forms into a ball. Wrap and chill for 30 mins.",
+        "Melt the remaining butter and sugar in a heavy frying pan. Cook, stirring for 2-3 mins until sugar begins to turn light brown. Add the halved and stoned plums and cook for 5 mins or until the juices begin to run and plums start to soften.",
+        "Lift the plums onto a shallow ovenproof dish.",
+        "On a lightly floured surface, roll the pastry into a circle slightly larger than the dish. Lay the pastry over the plums, tuck the edges down over the dish and make a few slits through the pastry.",
+        "Bake at 220&deg;C for 20 mins. Cook for 5 mins before carefully inverting on to a plate. This has been a favourite this summer. You can replace the raspberries with blackberries provided you don't have to feed people with false teeth."
       ],
-      "image": "https://i.imgur.com/ZzvEZlo.jpg"
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
     },
     {
       "id":18,
-      "title":"Roast beef",
-      "subtitle":"Great for sunday lunch",
+      "title":"Rasberry Sorbet",
+      "subtitle":"",
       "ingredients": [
         {
-          "name":"flour",
-          "size":"100",
+          "name":"ripe raspberries, blackberries, strawberries",
+          "size":"500",
           "unit":"g"
         },
         {
-          "name":"water",
-          "size":"100",
-          "unit":"ml"
+          "name":"sugar",
+          "size":"120",
+          "unit":"g"
         },
         {
-          "name":"egg",
-          "size":"1",
+          "name":"fresh egg whites",
+          "size":"2",
           "unit":""
         },
         {
-          "name":"baking-powder",
-          "size":"7",
-          "unit":"g"
+          "name":"lemon juice",
+          "size":"6",
+          "unit":"tsp"
         }
       ],
       "steps": [
-        "Place beef roast in crock pot.",
-        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-        "Pour the water around the roast.",
-        "Cook on low for 7-9 hours."
+        "Put the berries in a food processor and render to a purée.",
+        "Stir in the sugar, dissolving it completely.",
+        "Stir in the lemon juice.",
+        "Whisk the whites until they are stiff and then fold in the raspberry.",
+        "Put in ice cream maker for about 25 mins.",
+        "Serve."
       ],
-      "image": "https://i.imgur.com/3JftNxR.jpg"
+      "image": "https://i.imgur.com/8FIsiTh.jpg"
     }
   ]
 }
