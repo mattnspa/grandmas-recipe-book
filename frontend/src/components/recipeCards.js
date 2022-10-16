@@ -12,9 +12,6 @@ export const RecipeCard = ({recipe}) => {
         height={250}/>
       <Card.Body>
         <Card.Title>{recipe.title}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">{ recipe.subtitle }</Card.Subtitle>
-        <Card.Text>
-        </Card.Text>
         <Card.Link as={Link} to={`/recipes/${recipe.id}`}>Go to the recipe</Card.Link>
       </Card.Body>
     </Card>
