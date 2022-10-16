@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLocation, Routes, Route } from "react-router-dom"
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
 
+import banner from "./components/banner.png"
 import { NavbarComponent } from "./components/navbar";
 import { HomePage } from "./pages/home";
 import { InfoPage } from "./pages/info";
@@ -40,6 +43,9 @@ function App() {
   return (
     <div className="App">
       <NavbarComponent activeRoute={activeRoute} setActiveRoute={setActiveRoute} submitButton={submitButton}/>
+      <Container className="w-50 pt-3">
+        <Image src={banner} fluid />
+      </Container>
       <Routes>
         <Route path="/" element={<HomePage setActiveRoute={setActiveRoute} />} />
         <Route path="/info" element={<InfoPage />} />

@@ -53,7 +53,7 @@
         "Place in rough heaps on a greased baking tray.",
         "Bake in a moderately hot oven, 200&deg;C for 15-20 mins."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/1nTA6TB.png"
     },
     {
       "id":2,
@@ -102,7 +102,7 @@
         "Stir in the flour, salt and chocolate.",
         "Place in small spoonfuls on greased baking trays."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/m6KWw1d.png"
     },
     {
       "id":3,
@@ -148,7 +148,7 @@
         "Turn and brown on the otherside.",
         "Serve hot or cold with butter, jam or honey."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/2ejRCTl.png"
     },
     {
       "id":4,
@@ -197,7 +197,8 @@
         "Roll out thinkly and cut into rounds.",
         "Place on greased baking tray and bake at 180&deg;C for about 15 minutes."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/Jqzg9JV.png",
+      "image2": "https://i.imgur.com/NNtxcl5.png"
     },
     {
       "id":5,
@@ -252,7 +253,7 @@
         "Place the mixtrure in a loaf tin lined with grease proof paper.",
         "Bake in a moderate oven 180&deg;C for about 1 1/4 hours"
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/jWcXc0h.png"
     },
     {
       "id":6,
@@ -308,7 +309,7 @@
         "Place the mixture in a greased loaf tin.",
         "Bake in a moderate oven 160&deg;C for about 1 1/2 hours."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/zb6LevP.png"
     },
     {
       "id":7,
@@ -395,7 +396,8 @@
         "Cover with remaining cake mixture. Bake for 1 hour at 180&deg;C, and then 2.5 hours at 140&deg;C.",
         "Allow cake to cool, divide the remaining almond paste in two. Roll one half into 20.5cm and place them on the cake. You can make them stick on the cake with some apricote jam."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/4ZT31lY.png",
+      "image2": "https://i.imgur.com/4atdJA9.png"
     },
     {
       "id":8,
@@ -469,7 +471,8 @@
         "Bake in hot oven 220&deg;C for 15 - 20 minutes.",
         "Brush with a hot sugar glaze."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/V6agPA8.png",
+      "image2": "https://i.imgur.com/4atdJA9.png"
     },
     {
       "id":9,
@@ -518,12 +521,12 @@
         "Dust with caster sugar.",
         "Serve with cream or custard."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/Uhpy5x5.png"
     },
     {
       "id":10,
       "title":"Bara Brith",
-      "subtitle":"This is a recipe that was given to me years ago . We were staying in a village called Yateley, which is actually quite near Reading with some Italian students and the host \\“mother\\” used to put slices of this in the packed lunches. I thought it was so good that I asked her for the recipe. So this BARA BRITH, perhaps originally from Wales.",
+      "subtitle":"This is a recipe that was given to me years ago. We were staying in a village called Yateley, which is actually quite near Reading with some Italian students and the host “mother” used to put slices of this in the packed lunches. I thought it was so good that I asked her for the recipe. So this BARA BRITH, perhaps originally from Wales.",
       "ingredients": [
         {
           "name":"sultanas",
@@ -559,7 +562,7 @@
         "Turn out and leave to cool.",
         "Serve sliced with butter. "
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": ""
     },
     {
       "id":11,
@@ -602,7 +605,7 @@
         "When it is cold, put it in the fridge as long as you need it.",
         "Serve it upside down on a plate."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/JRteji8.png"
     },
     {
       "id":12,
@@ -640,7 +643,7 @@
         "Serve warm or cold, if you like with cream or Greek yogurt"
         
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/PGyFQ1n.png"
     },
     {
       "id":13,
@@ -719,7 +722,7 @@
         "Crumble the amaretti and add them to the mass with the other ingredients (minus the pine nuts).",
         "Pour the contents into a greased pan garnish with pine nuts and bake in a hot oven at 200&deg;C for about 1 hour and a half."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/c6Moqvk.png"
     },
     {
       "id":14,
@@ -803,7 +806,7 @@
         "Cream the filling ingredients together, add a tiny splash of orange juice if the mixture is too stiff.",
         "Sandwich the two cakes together with two third of the filling and spread the rest over the top ."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/hRT3cs0.png"
     },
     {
       "id":15,
@@ -872,7 +875,7 @@
         "Bake at 180&deg;C for abour 1 hour or until a skewer tests clean.",
         "Turn out while still warm and serve with cream."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/E2CW0qx.png"
     },
     {
       "id":16,
@@ -910,7 +913,7 @@
         "Add flour and stir well.",
         "Bake for 1 and 1/4 hours at 180&deg;C"
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/3KOYq1P.png"
     },
     {
       "id":17,
@@ -950,12 +953,12 @@
         "On a lightly floured surface, roll the pastry into a circle slightly larger than the dish. Lay the pastry over the plums, tuck the edges down over the dish and make a few slits through the pastry.",
         "Bake at 220&deg;C for 20 mins. Cook for 5 mins before carefully inverting on to a plate. This has been a favourite this summer. You can replace the raspberries with blackberries provided you don't have to feed people with false teeth."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/67yFHBr.png"
     },
     {
       "id":18,
       "title":"Rasberry Sorbet",
-      "subtitle":"",
+      "subtitle":"This has been a favourite this summer. You can replace the raspberries with blackberries provided you don't have to feed people with false teeth.",
       "ingredients": [
         {
           "name":"ripe raspberries, blackberries, strawberries",
@@ -986,7 +989,7 @@
         "Put in ice cream maker for about 25 mins.",
         "Serve."
       ],
-      "image": "https://i.imgur.com/8FIsiTh.jpg"
+      "image": "https://i.imgur.com/J6wkOLb.png"
     }
   ]
 }
