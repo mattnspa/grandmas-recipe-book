@@ -46,6 +46,7 @@
           "unit":"a little to mix"
         }
       ],
+      "cooking_time": 20,
       "steps": [
         "Mix the flour and salt, rub in the margarine.",
         "Stir in the sugar, currants and peel.",
@@ -96,6 +97,7 @@
           "unit":"g"
         }
       ],
+      "cooking_time": 15,
       "steps": [
         "Cream the margarine and sugar.",
         "Beat in the egg and essence.",
@@ -140,6 +142,7 @@
           "unit":"tbsp"
         }
       ],
+      "cooking_time": 5,
       "steps": [
         "Mix flour, salt and sugar, add the egg and gradually beat in milk to make a thick butter.",
         "Heat a non-stick pan and add a small amount of oil. Before you start cooking the scones wipe the pan with a bit of kitchen paper.",
@@ -191,6 +194,7 @@
           "unit":""
         }
       ],
+      "cooking_time": 15,
       "steps": [
         "Mix together the dry ingredients, rub in the margarine.",
         "Add the essence and mix well.",
@@ -246,6 +250,7 @@
           "unit":"g"
         }
       ],
+      "cooking_time": 75,
       "steps": [
         "Chop the dates, add the bicarbonate and pour boiling water over them.",
         "Cream the margarine and sugar, beat in the egg.",
@@ -301,6 +306,7 @@
           "unit":"ml"
         }
       ],
+      "cooking_time": 90,
       "steps": [
         "Mix flour and bicarbonate of soda, rub in fats.",
         "Mix in sugar, orange rind and raisins.",
@@ -387,6 +393,7 @@
           "unit":"g"
         }
       ],
+      "cooking_time": 210,
       "steps": [
         "Beat fat and sugar until light and fluffy.",
         "Add eggs one at a time with a little flour, beating well after each addition.",
@@ -460,6 +467,7 @@
           "unit":"g"
         }
       ],
+      "cooking_time": 20,
       "steps": [
         "Mix flour, salt and sugar in a bowl, rub in margarine. Then add the fruit and peel.",
         "Add yeast liquid (yeast mixed with wwarm water) and beaten egg to flour, knead well.",
@@ -510,6 +518,7 @@
           "unit":"g"
         }
       ],
+      "cooking_time": 40,
       "steps": [
         "Make the pastry. Mix flour and salt in basin, rub in fat. Using a knife to cut and stir, mix with cold water to form a stiff paste.",
         "Turn dough on to a floured and roll out.",
@@ -554,6 +563,7 @@
           "unit":""
         }
       ],
+      "cooking_time": 45,
       "steps": [
         "Put fruit and sugar in a bowl and pour over hot tea, stir well, cover and leave to stand overnight.",
         "Grease and line with greaseproof paper a large loaf tin.",
@@ -595,6 +605,7 @@
           "unit":"g"
         }
       ],
+      "cooking_time": 15,
       "steps": [
         "Melt the chocolate in the butter.",
         "Beat the egg yolks with the sugar and egg whites.",
@@ -633,6 +644,7 @@
           "unit":"g"
         }
       ],
+      "cooking_time": 40,
       "steps": [
         "You will need a 20.5cm square cake tin, greased and the base lined with greaseproof paper.",
         "Preheat oven 180&deg;C or 170&deg;C in a fan oven",
@@ -716,6 +728,7 @@
           "unit":"g"
         }
       ],
+      "cooking_time": 90,
       "steps": [
         "Pour the boiling milk over the bread and let it rest for at least 4 hours.",
         "Then knead it with your hands.",
@@ -795,6 +808,7 @@
           "unit":"splash"
         }
       ],
+      "cooking_time": 45,
       "steps": [
         "Preheat oven to 180&deg;C.",
         "Sift the flour, cocoa powder and baking powder together.",
@@ -864,6 +878,7 @@
           "unit":"tbsp"
         }
       ],
+      "cooking_time": 60,
       "steps": [
         "Grease a deep 7in. cake tin.",
         "Cook sugar and water until deep golden caramel, use a metal spoon to stir.",
@@ -908,6 +923,7 @@
           "unit":"g"
         }
       ],
+      "cooking_time": 75,
       "steps": [
         "Soak Albran, Fruit and sugar with 1/2 pint of milk for 1/2 an hour.",
         "Add flour and stir well.",
@@ -946,12 +962,13 @@
           "unit":"g"
         }
       ],
+      "cooking_time": 20,
       "steps": [
         "To make the pastry, put the floor in a food processor with 125g butter, 25g sugar. Pulse until the mixture resembles fine crumbs, then add 2-3 tbsp cold water and pulse until mixture forms into a ball. Wrap and chill for 30 mins.",
         "Melt the remaining butter and sugar in a heavy frying pan. Cook, stirring for 2-3 mins until sugar begins to turn light brown. Add the halved and stoned plums and cook for 5 mins or until the juices begin to run and plums start to soften.",
         "Lift the plums onto a shallow ovenproof dish.",
         "On a lightly floured surface, roll the pastry into a circle slightly larger than the dish. Lay the pastry over the plums, tuck the edges down over the dish and make a few slits through the pastry.",
-        "Bake at 220&deg;C for 20 mins. Cook for 5 mins before carefully inverting on to a plate. This has been a favourite this summer. You can replace the raspberries with blackberries provided you don't have to feed people with false teeth."
+        "Bake at 220&deg;C for 20 mins. Cool for 5 mins before carefully inverting on to a plate. This has been a favourite this summer. You can replace the raspberries with blackberries provided you don't have to feed people with false teeth."
       ],
       "image": "https://i.imgur.com/67yFHBr.png"
     },
@@ -981,6 +998,7 @@
           "unit":"tsp"
         }
       ],
+      "cooking_time": 25,
       "steps": [
         "Put the berries in a food processor and render to a purée.",
         "Stir in the sugar, dissolving it completely.",
