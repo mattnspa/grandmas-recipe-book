@@ -27,12 +27,12 @@ export const AllRecipesPage = props => {
   if (loading) return (<Loading />);
 
   return (
-    <div>   
-      <Card className="bg-light m-5">
+    <div class="d-flex justify-content-center">
+      <Card className="bg-light mb-5 mx-sm-5 w-75">
         <Paginator pageChange={pageChange} {...recipes.paging} />   
         <Row >
           { recipes.data?.map(recipe => (
-            <Col align="center" className="mt-5" key={recipe.id}>
+            <Col align="center" className="my-5 mx-2" key={recipe.id}>
               <RecipeCard recipe={recipe} />
           </Col>
           ))}

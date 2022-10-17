@@ -21,7 +21,7 @@ export const Paginator = props => {
   pageArr.sort();
 
   const handlePageRequest = (page) => {
-    pageChange(`?page=${page}`);
+    pageChange(`?page=${page}&limit=6`);
   }
   return (
     <Pagination>

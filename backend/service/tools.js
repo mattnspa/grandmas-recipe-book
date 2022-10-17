@@ -7,7 +7,7 @@
  module.exports = {
   paginate: function(data,queryLimit,queryPage) {
     minLimit = 1
-    maxLimit = 4
+    maxLimit = 6
     const limit = parseInt(queryLimit) ? Math.min(Math.max(parseInt(queryLimit),minLimit),maxLimit) : maxLimit;
     minPage = 1
     maxPage = Math.ceil(data.length / limit)
