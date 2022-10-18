@@ -10,6 +10,7 @@ export const SearchBar = () => {
         placeholder="Search"
         aria-label="Search"
         name="q"
+        className="me-2"
       />
       <Button type="submit" variant="outline-success" >Search</Button>
     </Form>
