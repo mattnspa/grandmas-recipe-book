@@ -8,6 +8,7 @@ import { Loading } from "../components/loading";
 import { Paginator } from "../components/paginator";
 import { RecipeCard } from "../components/recipeCards";
 import { FetchRecipe } from "../services/fetchRecipes";
+import { SearchBar } from "../components/searchbar";
 
 export const AllRecipesPage = props => {
   const [loading, setLoading] = useState(true);
@@ -34,17 +35,22 @@ export const AllRecipesPage = props => {
   if (loading) return (<Loading />);
 
   return (
-    <div className="d-flex justify-content-center">
-      <Card className="bg-light mb-5 mx-sm-5 w-75">
-        <Paginator pageChange={pageChange} {...recipes.paging} />   
-        <Row >
-          { recipes.data?.map(recipe => (
-            <Col align="center" className="my-5 mx-2" key={recipe.id}>
-              <RecipeCard recipe={recipe} />
-          </Col>
-          ))}
-        </Row>
-      </Card>
+    <div>
+      <div className="d-flex justify-content-center mb-5">
+        <SearchBar />
+      </div>
+      <div className="d-flex justify-content-center">
+        <Card className="bg-light mb-5 mx-sm-5 w-75">
+          <Paginator pageChange={pageChange} {...recipes.paging} />   
+          <Row >
+            { recipes.data?.map(recipe => (
+              <Col align="center" className="my-5 mx-2" key={recipe.id}>
+                <RecipeCard recipe={recipe} />
+            </Col>
+            ))}
+          </Row>
+        </Card>
+      </div>
     </div>
   );
 }

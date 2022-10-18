@@ -4,7 +4,6 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 
 import ImgPath from "./nav-icon-light.svg";
-import { SearchBar } from './searchbar';
 
 export const NavbarComponent = props => {
   const { activeRoute, setActiveRoute } = props;
@@ -49,7 +48,6 @@ export const NavbarComponent = props => {
               Info
           </Nav.Link>
         </Nav>
-        {activeRoute === routes.recipes && <SearchBar/>}
       </Container>
     </Navbar>
   );
