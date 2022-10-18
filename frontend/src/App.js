@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, Routes, Route } from "react-router-dom"
+import { useLocation, Routes, Route, Link } from "react-router-dom"
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 
@@ -22,7 +22,9 @@ function App() {
     <div className="App">
       <NavbarComponent activeRoute={activeRoute} setActiveRoute={setActiveRoute} />
       <Container className="w-50 pt-3">
-        <Image src={banner} fluid />
+        <Link to="/">
+          <Image src={banner} fluid />
+        </ Link>
       </Container>
       <Routes>
         <Route path="/" element={<HomePage setActiveRoute={setActiveRoute} />} />
