@@ -7,7 +7,7 @@ import ImgPath from "./nav-icon-light.svg";
 import { SearchBar } from './searchbar';
 
 export const NavbarComponent = props => {
-  const { activeRoute, setActiveRoute, submitButton } = props;
+  const { activeRoute, setActiveRoute } = props;
   
   const routes = {
     home: "/",
@@ -49,7 +49,7 @@ export const NavbarComponent = props => {
               Info
           </Nav.Link>
         </Nav>
-        {activeRoute === routes.recipes && <SearchBar submitButton={submitButton}/>}
+        {activeRoute === routes.recipes && <SearchBar/>}
       </Container>
     </Navbar>
   );

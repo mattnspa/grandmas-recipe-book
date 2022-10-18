@@ -20,19 +20,16 @@ export const Paginator = props => {
   const pageArr = uniquePageArr.slice(0,5)
   pageArr.sort();
 
-  const handlePageRequest = (page) => {
-    pageChange(`?page=${page}&limit=6`);
-  }
   return (
     <Pagination>
-      <Pagination.Prev disabled={!previousPage} onClick={() => {handlePageRequest(previousPage)}}/>
+      <Pagination.Prev disabled={!previousPage} onClick={() => {pageChange(previousPage)}}/>
       
-      {pageArr.map((page,index) => <Pagination.Item key={page} active={page === currentPage ? true : false}  onClick={() => {handlePageRequest(page)}}>
+      {pageArr.map((page,index) => <Pagination.Item key={page} active={page === currentPage ? true : false}  onClick={() => {pageChange(page)}}>
         {page}
         </Pagination.Item>
         )}
 
-      <Pagination.Next  disabled={!nextPage} onClick={() => {handlePageRequest(nextPage)}} />
+      <Pagination.Next  disabled={!nextPage} onClick={() => {pageChange(nextPage)}} />
     </Pagination>
   );
 }
