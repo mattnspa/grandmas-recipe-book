@@ -32,6 +32,12 @@ export const RecipePage = () => {
         <Card.Body>
           <Card.Title>{ recipe.title }</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">{ recipe.subtitle }</Card.Subtitle>
+          {window.innerWidth < 576 && recipe.image !== undefined && <Image
+              variant="top"
+              src={recipe.image}
+              w-100
+              className="ml-auto w-100 r-1x1"/>
+          }
           <Container className="d-flex">
             <Container>
               <Card.Text>
@@ -43,21 +49,19 @@ export const RecipePage = () => {
                 <Card.Text key={index}>{step}</Card.Text>
                 )}
             </Container>
-            <Container>
-            {recipe.image2 !== undefined && <Image
-              variant="top"
-              src={recipe.image}
-              width={350}
-              height={350}
-              className="ml-auto"/>
+            { window.innerWidth >= 576 && <Container>
+              { recipe.image !== undefined && <Image
+                variant="top"
+                src={recipe.image}
+                className="ml-auto w-100 r-1x1"/>
+              }
+              </Container>
             }
-            </Container>
           </Container>
           <Container className="d-flex justify-content-center">
             {recipe.image2 !== undefined && <Image
               src={recipe.image2}
-              width={550}
-              height={550}/>
+              className="w-100 r-1x1"/>
             }
           </Container>
         </Card.Body>
