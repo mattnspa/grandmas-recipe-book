@@ -30,7 +30,7 @@ export const HomePage = props => {
 
   return (
     <div className="d-flex justify-content-center">
-      <Card className="bg-light mb-5 mx-sm-5 w-75">
+      <Card className="bg-light mb-5 mx-sm-5 w-sm-75">
         <Row >
           { recipes.map(recipe => (
             <Col align="center" className="my-5 mx-2" key={recipe.id}>

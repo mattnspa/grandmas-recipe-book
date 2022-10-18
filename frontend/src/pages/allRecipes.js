@@ -9,6 +9,7 @@ import { Paginator } from "../components/paginator";
 import { RecipeCard } from "../components/recipeCards";
 import { FetchRecipe } from "../services/fetchRecipes";
 import { SearchBar } from "../components/searchbar";
+import { Container } from "@mui/system";
 
 export const AllRecipesPage = props => {
   const [loading, setLoading] = useState(true);
@@ -40,8 +41,10 @@ export const AllRecipesPage = props => {
         <SearchBar />
       </div>
       <div className="d-flex justify-content-center">
-        <Card className="bg-light mb-5 mx-sm-5 w-75">
-          <Paginator pageChange={pageChange} {...recipes.paging} />   
+        <Card className="bg-light mb-5 mx-sm-5 w-sm-75">
+          <Container className="d-flex justify-content-center">
+            <Paginator pageChange={pageChange} {...recipes.paging} />
+          </Container>
           <Row >
             { recipes.data?.map(recipe => (
               <Col align="center" className="my-5 mx-2" key={recipe.id}>
