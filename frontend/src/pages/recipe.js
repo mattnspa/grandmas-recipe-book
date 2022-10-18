@@ -26,7 +26,7 @@ export const RecipePage = () => {
   if (loading) return (<Loading />);
 
   return (
-    <Container className="mt-5">
+    <Container className="my-5">
       <Card>
         <Card.Body>
           <Card.Title>{ recipe.title }</Card.Title>
