@@ -29,7 +29,7 @@ export const HomePage = props => {
   if (loading) return (<Loading />);
 
   return (
-    <div class="d-flex justify-content-center">
+    <div className="d-flex justify-content-center">
       <Card className="bg-light mb-5 mx-sm-5 w-75">
         <Row >
           { recipes.map(recipe => (

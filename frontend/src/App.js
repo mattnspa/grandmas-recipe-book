@@ -11,48 +11,25 @@ import { RecipePage } from "./pages/recipe";
 import { AllRecipesPage } from "./pages/allRecipes";
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [slug, setSlug] = useState("");
   const [activeRoute, setActiveRoute] = useState("");
   const location = useLocation();
 
-
-  useEffect(() => {
-    setSlug(searchQuery)
-  },[searchQuery]);  
-    
   useEffect(() => {
     setActiveRoute(location.pathname)
   },[location.pathname]);
 
-  const submitButton = (submittedQuery) => {
-    setSearchQuery(`/search?q=${submittedQuery}`);
-  };
-
-  const pageChange = (pageRequestSlug) => {
-    const createdQuery = `${searchQuery}${pageRequestSlug}`
-    const sanitizedQuery = createdQuery
-      // replace all '?' with '&'
-      .replace(/[?]/g,'&')
-      // replace first '&' with '?'
-      .replace('&','?');
-
-    setSlug(sanitizedQuery);
-  };
-
   return (
     <div className="App">
-      <NavbarComponent activeRoute={activeRoute} setActiveRoute={setActiveRoute} submitButton={submitButton}/>
+      <NavbarComponent activeRoute={activeRoute} setActiveRoute={setActiveRoute} />
       <Container className="w-50 pt-3">
         <Image src={banner} fluid />
       </Container>
       <Routes>
         <Route path="/" element={<HomePage setActiveRoute={setActiveRoute} />} />
         <Route path="/info" element={<InfoPage />} />
-        <Route path="/recipes" element={<AllRecipesPage pageChange={pageChange} slug={slug} />} />
+        <Route path="/recipes" element={<AllRecipesPage />} />
         <Route path="/recipes/:id" element={<RecipePage />} />
       </Routes>
-      
     </div>
   );
 }
