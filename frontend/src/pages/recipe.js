@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container"
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
 import { useParams } from "react-router-dom";
 
 import { Loading } from "../components/loading";
@@ -31,14 +32,34 @@ export const RecipePage = () => {
         <Card.Body>
           <Card.Title>{ recipe.title }</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">{ recipe.subtitle }</Card.Subtitle>
-          <Card.Text>
-            {recipe.ingredients?.map((ingredient, index) => 
-              <li key={index}>{ingredient.name}: {ingredient.size}{ingredient.unit}</li>
-              )}           
-          </Card.Text>
-          {recipe.steps?.map((step, index) => 
-            <Card.Text key={index}>{step}</Card.Text>
-            )}
+          <Container className="d-flex">
+            <Container>
+              <Card.Text>
+                {recipe.ingredients?.map((ingredient, index) => 
+                  <li key={index}>{ingredient.name}: {ingredient.size}{ingredient.unit}</li>
+                  )}           
+              </Card.Text>
+              {recipe.steps?.map((step, index) => 
+                <Card.Text key={index}>{step}</Card.Text>
+                )}
+            </Container>
+            <Container>
+            {recipe.image2 !== undefined && <Image
+              variant="top"
+              src={recipe.image}
+              width={350}
+              height={350}
+              className="ml-auto"/>
+            }
+            </Container>
+          </Container>
+          <Container className="d-flex justify-content-center">
+            {recipe.image2 !== undefined && <Image
+              src={recipe.image2}
+              width={550}
+              height={550}/>
+            }
+          </Container>
         </Card.Body>
       </Card>
     </Container>
