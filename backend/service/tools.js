@@ -1,4 +1,6 @@
 
+var ingredientsJson = require("../db/recipes.json");
+
 /**
  * Return a paginated data object.
  * @param {[]} data List of recipes
@@ -37,5 +39,12 @@
   },
   sleep: function(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+  },
+  fetchRecipes: function(query) {
+    return ingredientsJson.recipes.filter(recipe =>
+      recipe.title.toLowerCase().includes(query));
+  },
+  fetchTitles: function(data) {
+    return data.map(recipes => ({"title":recipes.title,"id":recipes.id}));
   }
 }
