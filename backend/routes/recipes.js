@@ -42,9 +42,7 @@ router.get('/random', function(req, res, next) {
 router.get('/search', function(req, res, next) {
   let query = "";
   if (req.query.q) query = req.query.q.toLowerCase();
-  const recipeArr = ingredientsJson.recipes.filter(
-    recipe => {return recipe.title.toLowerCase().includes(query);}
-  );
+  const recipeArr = tools.fetchRecipes(query);
   recipeArr.length > 0 ? 
     res.json(tools.paginate(recipeArr, req.query.limit, req.query.page)) :
     res.status(404).send('Recipes not found');
@@ -62,6 +60,15 @@ router.get('/id/:id', function(req, res, next) {
   res.status(404).send('Recipe not found');
 });
 
+router.get('/query', function(req, res, next) {
+  let query = "";
+  if (req.query.q) query = req.query.q.toLowerCase();
+  if (query.length > 2) {
+    const titles = tools.fetchTitles(tools.recipes(query))
+    titles.length > 0 ? res.json(titles) : res.status(404).send('No recipes found');;
+  }
+  else res.status(404).send('Query too short');
+});
 
 
 module.exports = router;
