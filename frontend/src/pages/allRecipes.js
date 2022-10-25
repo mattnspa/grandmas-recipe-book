@@ -8,8 +8,8 @@ import { Loading } from "../components/loading";
 import { Paginator } from "../components/paginator";
 import { RecipeCard } from "../components/recipeCards";
 import { FetchRecipe } from "../services/fetchRecipes";
-import { SearchBar } from "../components/searchbar";
 import { Container } from "@mui/system";
+import { SearchBar } from "../components/search/searchbar";
 
 export const AllRecipesPage = props => {
   const [loading, setLoading] = useState(true);

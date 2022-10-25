@@ -64,7 +64,7 @@ router.get('/query', function(req, res, next) {
   let query = "";
   if (req.query.q) query = req.query.q.toLowerCase();
   if (query.length > 2) {
-    const titles = tools.fetchTitles(tools.recipes(query))
+    const titles = tools.fetchTitles(tools.fetchRecipes(query))
     titles.length > 0 ? res.json(titles) : res.status(404).send('No recipes found');;
   }
   else res.status(404).send('Query too short');
