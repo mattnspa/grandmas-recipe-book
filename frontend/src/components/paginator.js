@@ -21,15 +21,17 @@ export const Paginator = props => {
   pageArr.sort();
 
   return (
-    <Pagination>
-      <Pagination.Prev disabled={!previousPage} onClick={() => {pageChange(previousPage)}}/>
-      
-      {pageArr.map((page,index) => <Pagination.Item key={page} active={page === currentPage ? true : false}  onClick={() => {pageChange(page)}}>
-        {page}
-        </Pagination.Item>
-        )}
+    <>
+      { pageArr.length > 1 && <Pagination>
+        <Pagination.Prev disabled={!previousPage} onClick={() => {pageChange(previousPage)}}/>
+        
+        {pageArr.map((page,index) => <Pagination.Item key={page} active={page === currentPage ? true : false}  onClick={() => {pageChange(page)}}>
+          {page}
+          </Pagination.Item>
+          )}
 
-      <Pagination.Next  disabled={!nextPage} onClick={() => {pageChange(nextPage)}} />
-    </Pagination>
+        <Pagination.Next  disabled={!nextPage} onClick={() => {pageChange(nextPage)}} />
+      </Pagination>}
+    </>
   );
 }
