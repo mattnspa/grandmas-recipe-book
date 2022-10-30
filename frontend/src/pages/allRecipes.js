@@ -10,10 +10,12 @@ import { RecipeCard } from "../components/recipeCards";
 import { FetchRecipe } from "../services/fetchRecipes";
 import { Container } from "@mui/system";
 import { SearchBar } from "../components/search/searchbar";
+import { ErrorPage } from "./error";
 
 export const AllRecipesPage = props => {
   const [loading, setLoading] = useState(true);
   const [recipes, setRecipes] = useState([]);
+  const [error, setError] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const pageChange = (page) => {
@@ -24,7 +26,7 @@ export const AllRecipesPage = props => {
   useEffect(() => {
     const controller = new AbortController();
     const fetchData = async () => {
-      await FetchRecipe(`/search?${searchParams.toString()}`, controller, setLoading, setRecipes)
+      await FetchRecipe(`/search?${searchParams.toString()}`, controller, setLoading, setRecipes, setError)
     }
     fetchData()
     return () => {
@@ -33,7 +35,9 @@ export const AllRecipesPage = props => {
   },[searchParams]) 
 
   
-  if (loading) return (<Loading />);
+  if (loading) return ( <Loading /> );
+
+  if (error) return ( <ErrorPage /> );
 
   return (
     <div>

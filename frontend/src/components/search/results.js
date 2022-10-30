@@ -8,26 +8,26 @@ export const Results = ({query, target}) => {
 
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false)
   const [show, setShow] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
     const fetchData = async () => {
-      setRecipes([])
-      await FetchRecipe(`/query?q=${query}`, controller, setLoading, setRecipes)
+      await FetchRecipe(`/query?q=${query}`, controller, setLoading, setRecipes, setError)
     }
-    fetchData()
-    recipes.length > 0 ? setShow(true) : setShow(false);
+    setRecipes([])
+    if (query.length > 2) {fetchData()};
+    (recipes.length > 0) ? setShow(true) : setShow(false);
     return () => {
       controller.abort()
     }
-  },[query]) 
-
+  },[query])
 
   return (
     <Overlay
         show={show}
-        target={target}
+        target={target.current}
         placement="bottom"
       >
       <Popover id="popover-contained">
