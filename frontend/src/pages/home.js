@@ -8,16 +8,18 @@ import { Link } from "react-router-dom";
 import { Loading } from "../components/loading";
 import { RecipeCard } from "../components/recipeCards";
 import { FetchRecipe } from "../services/fetchRecipes";
+import { ErrorPage } from "./error";
 
 export const HomePage = props => {
   const [loading, setLoading] = useState(true);
   const [recipes, setRecipes] = useState([]);
+  const [error, setError] = useState(false);
   const slug = "/random"
 
   useEffect(() => {
     const controller = new AbortController();
     const fetchData = async () => {
-      await FetchRecipe(slug, controller, setLoading, setRecipes)
+      await FetchRecipe(slug, controller, setLoading, setRecipes, setError)
     }
     fetchData()
     return () => {
@@ -26,7 +28,9 @@ export const HomePage = props => {
   },[slug])
 
 
-  if (loading) return (<Loading />);
+  if (loading) return ( <Loading /> );
+
+  if (error) return ( <ErrorPage /> );
 
   return (
     <div className="d-flex justify-content-center">

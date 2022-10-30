@@ -6,17 +6,19 @@ import { useParams } from "react-router-dom";
 
 import { Loading } from "../components/loading";
 import { FetchRecipe } from "../services/fetchRecipes";
+import { ErrorPage } from "./error";
 
 export const RecipePage = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const slug = `/id/${id}`;
 
   useEffect(() => {
     const controller = new AbortController();
     const fetchData = async () => {
-      await FetchRecipe(slug, controller, setLoading, setRecipe)
+      await FetchRecipe(slug, controller, setLoading, setRecipe, setError)
     }
     fetchData()
     return () => {
@@ -25,6 +27,8 @@ export const RecipePage = () => {
   },[slug])
 
   if (loading) return (<Loading />);
+
+  if (error) return ( <ErrorPage /> )
 
   return (
     <Container className="my-5">
